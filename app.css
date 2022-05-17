@@ -1,0 +1,369 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+	border: 0;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box
+}
+
+body {
+	line-height: 1
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+	content: "";
+	content: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+blockquote,
+q {
+	quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+	content: "";
+	content: none
+}
+
+button {
+	background-color: transparent;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	padding: 0
+}
+
+:focus,
+button {
+	outline: none
+}
+/* ============ APP ============ */
+@font-face {
+	font-display: swap;
+	font-family: FuturaPT;
+	font-weight: 300;
+	src: url(./fonts/FuturaPTBook.woff2) format("woff2"), url(../fonts/FuturaPTBook.woff) format("woff")
+}
+
+@font-face {
+	font-display: swap;
+	font-family: FuturaPT;
+	font-weight: 400;
+	src: url(./fonts/FuturaPTMedium.woff2) format("woff2"), url(../fonts/FuturaPTMedium.woff) format("woff")
+}
+
+@font-face {
+	font-display: swap;
+	font-family: FuturaPT;
+	font-weight: 700;
+	src: url(./fonts/FuturaPTBold.woff2) format("woff2"), url(../fonts/FuturaPTBold.woff) format("woff")
+}
+
+.d-none {
+	display: none !important
+}
+
+:after,
+:before,
+a,
+span {
+	display: inline-block
+}
+:root {
+	--duet-color-primary: rgba(0,80,60, 1);
+}
+
+html {
+	height: 100%
+}
+
+body {
+	color: #000;
+	display: flex;
+	flex-direction: column;
+	font-family: FuturaPT, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.3;
+	min-height: 100%
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1286px;
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: #fff
+}
+
+.main {
+	background-color: #f8f8fa;
+	flex: 1 0 auto;
+	display: flex;
+	overflow-x: hidden;
+}
+
+.logo {
+	height: auto;
+	max-width: 120px
+}
+
+.logo-link {
+	display: block;
+	font-size: 0
+}
+
+.btn {
+	background-color: #dce123;
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: 700;
+	padding: 1.1rem;
+	text-align: center;
+	text-transform: uppercase;
+	transition: .3s;
+	width: 100%;
+	text-decoration: none;
+	color: inherit;
+	max-width: 290px;
+	display: block;
+	margin: 0 auto;
+	font-family: inherit;
+}
+.btn.disabled,
+.btn:disabled {
+	background-color: #d1cdcd;
+	color: #5e5e5e;
+	cursor: default;
+}
+
+.btn:active:not(:disabled):not(.disabled),
+.btn:hover:not(:disabled):not(.disabled) {
+	background-color: #cace1c
+}
+
+.step-intro {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.step-manual-signature {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.step-intro .btn {
+	margin-top: 1rem;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20vh;
+}
+
+[for="inpDate"] {
+	color: #9e9c9c;
+	width: 100%;
+	max-width: 290px;
+}
+
+.h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+@media (min-width:1200px) {
+	.logo {
+		max-width: 180px
+	}
+}
+
+#sketch {
+	border: 5px dashed #5e5e5e;
+	flex-grow: 1;
+	line-height: 0;
+}
+
+#canvas {
+	width: 100%;
+	height: 100%;
+	touch-action: none;
+}
+
+.step-manual-signature__btn-group {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	display: flex;
+	justify-content: end;
+
+}
+
+/* duet-date-picker */
+.datepicker-important {
+	font-size: 1.5rem;
+	border: 2px solid #9e9c9c;
+	width: 100%;
+	max-width: 290px;
+	margin-top: .5rem;
+}
+
+.datepicker-important .duet-date__input {
+	border: none;
+	border-radius: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.datepicker-important .duet-date__input:focus {
+	box-shadow: 0 0 0 2px rgba(0,80,60, .3);
+}
+.datepicker-important .duet-date__select select:focus+.duet-date__select-label,
+.datepicker-important .duet-date__toggle:focus {
+	box-shadow: none;
+	outline: none;
+}
+.datepicker-important .duet-date__input {
+	color: #9e9c9c;
+}
+.datepicker-important .duet-date__input::-webkit-input-placeholder,
+.datepicker-important .duet-date__input::placeholder {
+	color: #d1cdcd;
+}
+/* duet-date-picker */
+
+
+@media (max-width:575px) {
+	.step-manual-signature__btn-group .btn{
+		max-width: 40%;
+		padding: .75rem;
+	}
+}
